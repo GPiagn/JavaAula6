@@ -35,16 +35,17 @@ public class Main {
                 a = new Moto(modelo, fabricante, ano);
                 break;
         }
-
+        int i = 0;
+    while(i!=1) {
         do {
-            System.out.println("Escolha o que fazer: 1- Acelerar\n2- Desacerar\n3- Parar");
+            System.out.println("Escolha o que fazer: \n1- Acelerar\n2- Desacerar\n3- Parar\n4-sair");
             op = sc.nextInt();
-            if(op > 2 || op < 1 ){
+            if (op > 4 || op < 1) {
                 System.out.println("Opção invalida");
             }
-        }while(op >3 || op <1);
+        } while (op > 4 || op < 1);
 
-        switch(op){
+        switch (op) {
             case 1:
                 a.acelerar();
                 System.out.println(a.toString());
@@ -57,6 +58,10 @@ public class Main {
                 a.parar();
                 System.out.println(a.toString());
                 break;
+            case 4:
+                i = 1;
+                break;
         }
+    }
     }
 }
